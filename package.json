@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx watch ./src/server.ts",
+    "test": "tsx ./src/test/test.01.ts"
   },
   "keywords": [],
   "author": "",
