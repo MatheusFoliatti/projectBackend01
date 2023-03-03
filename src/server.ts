@@ -1,14 +1,18 @@
 import express from 'express';
 
-const app = express();
+const server = express();
 
-const port = 3000;
+const port = 3333;
 
-app.get('/', (request, response ) => {
-  // response.send('Hello World! - FEMA - Alunos')
-  response.json({msg:"Fim da Aula!!!"});
+server.get('/', (request, response ) => {
+  response.send('Hello World! - FEMA - Alunos')
+  //response.json({msg:"Fim da Aula!!!"});
 });
 
-app.listen(port, () => {
-  console.log('Server running!! 👌👌👌👌👌');
+server.post('/', (request, response) => {
+
+} )
+
+server.listen(port, () => {
+  console.log(`Server Running - end: http://localhost:${port}`);
 })
