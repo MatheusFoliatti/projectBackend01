@@ -9,7 +9,9 @@ server.use(express.json())
 const dados: string[] = []
 
 server.get('/', (request, response ) => {
-  response.send('Hello World! - FEMA - Alunos')
+  response.json(dados)
+
+  //response.send('Hello World! - FEMA - Alunos')
   //response.json({msg:"Fim da Aula!!!"});
 });
 
@@ -21,7 +23,7 @@ server.post('/', (request, response) => {
 
   dados.push(name);
 
-  response.status(201).send(name);
+  response.status(201).send();
 
 })
 
