@@ -1,3 +1,4 @@
+import { Database } from './database';
 import express from 'express';
 
 const server = express();
@@ -6,10 +7,10 @@ const port = 3333;
 
 server.use(express.json())
 
-const dados: string[] = []
+const database = new Database();
 
 server.get('/', (request, response ) => {
-  response.json(dados)
+  response.json(database)
 
   //response.send('Hello World! - FEMA - Alunos')
   //response.json({msg:"Fim da Aula!!!"});
@@ -19,9 +20,15 @@ server.get('/', (request, response ) => {
 // Parâmetrp que esta indo para o CLIENTE = RESPONSE
 
 server.post('/', (request, response) => {
-  const { name } = request.body;
+  const { name, email } = request.body;
 
-  dados.push(name);
+  const user = {
+    id: '1',
+    name,
+    email
+  };
+
+  database.insert('user', user)
 
   response.status(201).send();
 
