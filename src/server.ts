@@ -10,7 +10,8 @@ server.use(express.json())
 const database = new Database();
 
 server.get('/', (request, response ) => {
-  response.json(database)
+  const user = database.select("user")
+  response.json(user);
 
   //response.send('Hello World! - FEMA - Alunos')
   //response.json({msg:"Fim da Aula!!!"});
