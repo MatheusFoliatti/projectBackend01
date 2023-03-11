@@ -31,7 +31,7 @@ server.post('/', (request, response) => {
 
   database.insert('user', user)
 
-  response.status(201).send();
+  response.status(201).json({msg:'Eu sei o que você fez no verão passado'});
 
 })
 
