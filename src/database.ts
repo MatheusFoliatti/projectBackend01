@@ -14,7 +14,9 @@ export class Database{
     fs.readFile(databasePath, 'utf8')
       .then(data => {
         this.#database = JSON.parse(data)
-      })
+      }).catch(() => {
+        this.#persist();
+      });
   }
 
   select(table:string):object {
