@@ -5,7 +5,7 @@ const databasePath = new URL('../db.json', import.meta.url)
 export class Database{
 
   #persist() {
-    fs.writeFile(databasePath,  JSON.stringify(this.#database))
+    fs.writeFile(databasePath,  JSON.stringify(this.#database, null, 2))
   }
 
   #database:any = {}
