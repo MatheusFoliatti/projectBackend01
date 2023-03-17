@@ -1,13 +1,17 @@
-### Test Conexão
+### Buscar todo os ID
 GET http://localhost:3333
 
-### Test Post
-POST http://localhost:3333
-content-type: application/json
+### Buscar ID especifico
+GET http://localhost:3333/49a368e5-7322-4549-88f0-31f0415e57c5
 
+### Buscar ID especifico
+GET http://localhost:3333/49a368e5-7322-4549-88f0-31f0415e5
+
+### Inserir Informação no banco
+POST http://localhost:3333 content-type: application/json
 {
-    "name": "FEMA",
-    "curso": "Tecnico em Informatica",
-    "email":"fema@fema.com",
-    "uc":"Programação WEB 3"
+"name": "FEMA 2", "curso": "Tecnico em Informatica", "email":"fema@fema.com", "uc":"Programação WEB 3"
 }
+
+### Deletar um usuario do banco
+DELETE http://localhost:3333/3f46789e-c05e-4196-a170-2dffe0a99bc0
