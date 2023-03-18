@@ -14,3 +14,13 @@ content-type: application/json
 
 ### Deletar um usuario do banco
 DELETE http://localhost:3333/a05172be-8ce6-4e0b-b889-220177c06282
+
+### Atualizar um usuário e um ID no Banco.
+
+PUT http://localhost:3333/08005ae2-d0f1-4d89-a0dd-1259189e1a76
+content-type: application/json
+
+{
+"name": "Adriano Silva Santos",
+"email":"adriano.s.santos@fema.com"
+}
